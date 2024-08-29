@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player with Autocomplete</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+    <div class="header">
+        <h1>Video Player</h1>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search..." onkeyup="showSuggestions()">
+            <button>Search</button>
+            <div id="autocomplete-list" class="autocomplete-suggestions"></div>
+        </div>
+        <div class="profile-container" id="profile-pic">
+            <div class="upload-container">
+                <button class="upload-btn" id="upload-button">Upload Profile Picture</button>
+                <input type="file" id="upload-input" class="upload-input" accept="image/*">
+            </div>
+        </div>
+    </div>
+    </header>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#">Home</a>
+        <a href="#">Trending</a>
+        <a href="#">Subscriptions</a>
+        <a href="#">Library</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="video-player" id="video-player-container">
+            <video id="main-video" controls>
+                <source src="your_default_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="video-thumbnails" id="video-thumbnails-container">
+            <div class="video" data-video-url="https://drive.google.com/file/d/1pCmzYCTIlJLO6Jnv_udbGs7CMD9cS0oq/view?usp=sharing">
+                <img src="thumbnail1.jpg" alt="Video 1">
+                <button class="play-button"></button>
+                <p>Video 1</p>
+            </div>
+            <div class="video" data-video-url="video2.mp4">
+                <img src="thumbnail2.jpg" alt="Video 2">
+                <button class="play-button"></button>
+                <p>Video 2</p>
+            </div>
+            <div class="video" data-video-url="video3.mp4">
+                <img src="thumbnail3.jpg" alt="Video 3">
+                <button class="play-button"></button>
+                <p>Video 3</p>
+            </div>
+            <div class="video" data-video-url="video4.mp4">
+                <img src="thumbnail4.jpg" alt="Video 4">
+                <button class="play-button"></button>
+                <p>Video 4</p>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+
+</body>
+</html>
